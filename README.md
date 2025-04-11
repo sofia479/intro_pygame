@@ -107,3 +107,44 @@ while True:
 ```
 
 ![screen](screen.jpg)
+
+## Gestion del tiempo y los eventos
+
+## modulo tine
+
+- ofrece varias funciones que permiten cronometar la sesion actual (desde el inif()) o pausar,la ejecucion por ejemplo,
+- funciones:
+-pygame.lime.git_ticks
+- pygame.rime.waitpygame.time.delay
+
+- objeto clock
+  - la funcion tick permite actualizar el reloj asociado con el juego actual,
+  - se llama cada vez que se actualiza la pantalla del juego.
+  - permite especificar el numero maximo de fotogramas que se mestran por segundo,y por velocidad de ejecucion del juego.
+  - si insertamos en bucle de juego la siguiente linea,garantizamos que nunca se ira mas rapido de 50 fotogramas por segundo:`clock.tick(50)`
+
+  ### Gestion de eventos
+- hay diferentes formas para que el progrma sepa que se ha desencadenado un evento,
+- es esencial que los programas puedan conocer inmediatamente las acciones del jugador a traves del teclado,mouse, un joystick o cualquier otro periferico.
+
+#### funcion pygame.event.get
+- permite obtener todos los eventos en espera de ser procesados y que estan disponibles en una cola
+- si no hay ningun,se obtiene una coleccion vacia.
+```python
+# usamos un bucle para recorrer todos los eventos de la coleccion obtenida al llamar a la funcion 
+for eventin pygame.vent.get():
+  if event.type == pygame.KEYDOWM:
+    PARAR_JUEGO = True
+```    
+#### funcion pygame.event.wait
+- esta funcion espera a que ocurra y en cuanto sucede esta disponible.
+
+```python
+while True:
+     event=pygame.event.wait()
+     if event.type == pygame.QUIT:
+       break
+```
+
+#### funcion pygame.event.poll
+- devuelve solo uno de los eventos que estan en la cola de espera
