@@ -148,3 +148,26 @@ while True:
 
 #### funcion pygame.event.poll
 - devuelve solo uno de los eventos que estan en la cola de espera
+
+## sonidos en pygame
+- pygame.mixer: modulo que permite la gestion del sonido.
+-music.submodulo:que gestiona la musica de fondo.nesesariamente solo hay uno a la vez,
+- sound.objeto:de mixer que se puede instanciar varias veces para usarlo en efectos de sonido del juego
+
+### archivos de sonido
+- se recomienda usar dos formatos,principales:
+- formato wav (naveform audio faile forrat)
+- formato abierto y gratuito dgg
+
+### chanel (canal)en pygame
+- un juego tiene varios canales de sonido
+- se puede asignar un sonido al canal numero 1 y otro diferente al canal numero 2,
+- entonces es posible reproducir sonidos simultaneamente activando la lectura en diferentes canales 
+## sprites
+- objeto que asocia una ubicació, una representación gráfica (esta o aquela imagen, porejemplo) y un conjunto de propiedades.
+- estas propiedades pueden ser un nombre, un texto, valores booleanos que caracterizan el objeto en cuestión (por ejemplo si el objeto se puede mover o no)
+- una posible traducción del termino sprite podría ser "imagen/objeto" que se actualiza con cada iteración del bucle del juego.
+-cuanto mas complejo es el juego, mas objetos gráficos tiene que gestionar y actualizar, lo que puede ser tedioso.
+- pygame usa no solo la noción de sprite, sino la noción de grupo de sprites (group)
+- la noción de group permite agrupar los objetos del mismo tipo. ejemplo: Todos los soldados de un ejercito, lo que se entiende como una solución de instancias de una clase Soldado.
+- un determinado procesamiento se puede aplicar a un conjunto o subconjunto de sprites.  EJEMPLO: xambiar el color de todos los enemigos o hacerinvisibles algunos objetos.
